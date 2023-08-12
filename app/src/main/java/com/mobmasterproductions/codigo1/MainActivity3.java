@@ -42,24 +42,7 @@ public class MainActivity3 extends AppCompatActivity {
         btn1 = (Button) findViewById(R.id.btn1);
         imgTurno = (LottieAnimationView)findViewById(R.id.imgTurno);
         txtJugador = (TextView) findViewById(R.id.txtJugador);
-        img1 = (LottieAnimationView)findViewById(R.id.img1);
-        img2 = (LottieAnimationView)findViewById(R.id.img2);
-        img3 = (LottieAnimationView)findViewById(R.id.img3);
-        img4 = (LottieAnimationView)findViewById(R.id.img4);
-        img5 = (LottieAnimationView)findViewById(R.id.img5);
-        img6 = (LottieAnimationView)findViewById(R.id.img6);
-        img7 = (LottieAnimationView)findViewById(R.id.img7);
-        img8 = (LottieAnimationView)findViewById(R.id.img8);
-        img9 = (LottieAnimationView)findViewById(R.id.img9);
         txtGanador = (TextView)findViewById(R.id.txtGanador);
-
-        /*Dialog dialogo = new Dialog(this);
-        dialogo.setContentView(R.layout.vista_dialogo);
-        txtDialogoG = (TextView)dialogo.findViewById(R.id.txtDialogoG);
-        dialogo.show();
-        txtDialogoG.setText("Jugador 1");*/
-
-
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,6 +57,51 @@ public class MainActivity3 extends AppCompatActivity {
                 }
             }
         });
+        vista1();
+    }
+
+
+
+    private void vista1(){
+        for (int i = 1; i <= 9; i++) {
+            int resourceId = getResources().getIdentifier("img" + i, "id", getPackageName());
+            ImageView img = findViewById(resourceId);
+            img.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(img.getTag().equals("null")) {
+                        if (turno == 1) {
+                            // cambiar imagen a android
+                            img.setImageResource(R.mipmap.android);
+                            imgTurno.setImageResource(R.mipmap.apple);
+                            txtJugador.setText("Jugador 2");
+                            turno = 2;
+                            img.setTag("android");
+                        } else {
+                            // cambiar imagen a apple
+                            img.setImageResource(R.mipmap.apple);
+                            imgTurno.setImageResource(R.mipmap.android);
+                            txtJugador.setText("Jugador 1");
+                            turno = 1;
+                            img.setTag("apple");
+                        }
+                    }
+                }
+            });
+
+        }
+    }
+
+    private void vista2(){
+        img1 = (LottieAnimationView)findViewById(R.id.img1);
+        img2 = (LottieAnimationView)findViewById(R.id.img2);
+        img3 = (LottieAnimationView)findViewById(R.id.img3);
+        img4 = (LottieAnimationView)findViewById(R.id.img4);
+        img5 = (LottieAnimationView)findViewById(R.id.img5);
+        img6 = (LottieAnimationView)findViewById(R.id.img6);
+        img7 = (LottieAnimationView)findViewById(R.id.img7);
+        img8 = (LottieAnimationView)findViewById(R.id.img8);
+        img9 = (LottieAnimationView)findViewById(R.id.img9);
 
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -408,49 +436,7 @@ public class MainActivity3 extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                turno = (int)(Math.random()*2)+1;
-                txtJugador.setText("Jugador " + turno);
-                if(turno == 1){
-                    imgTurno.setImageResource(R.mipmap.android);
-                }else if(turno == 2){
-                    imgTurno.setImageResource(R.mipmap.apple);
-                }
-            }
-        });
-
-        img1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(turno == 1){
-                    img1.setImageResource(R.mipmap.android);
-                    turno = 2;
-                    imgTurno.setImageResource(R.mipmap.apple);
-                }else if(turno == 2){
-                    img1.setImageResource(R.mipmap.apple);
-                    turno = 1;
-                    imgTurno.setImageResource(R.mipmap.android);
-                }
-            }
-        });*/
     }
 }
+
+
