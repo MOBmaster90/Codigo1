@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FF000000">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:lottie_rawRes="@raw/ghost"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/meltedmonster"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="#DC3838"
+        android:text="SCORE" />
+
+    <TextView
+        android:id="@+id/txtScore1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/meltedmonster"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="1. 0 pts." />
+
+    <TextView
+        android:id="@+id/txtScore2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/meltedmonster"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="2. 0 pts." />
+
+    <TextView
+        android:id="@+id/txtScore3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:fontFamily="@font/meltedmonster"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="3. 0 pts." />
+</LinearLayout>

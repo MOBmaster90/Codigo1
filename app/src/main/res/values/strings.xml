@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Codigo1</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="nivel">Nivel:</string>
+    <string name="score">Score:</string>
+    <string-array name="valoresSP">
+        <item>T.I.</item>
+        <item>C.C.</item>
+        <item>P.A.</item>
+    </string-array>
+</resources>
