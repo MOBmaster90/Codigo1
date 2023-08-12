@@ -92,7 +92,7 @@ public class MainActivity3 extends AppCompatActivity {
         }
     }
 
-    private void vista2(){
+    private void vista2(){ //
         img1 = (LottieAnimationView)findViewById(R.id.img1);
         img2 = (LottieAnimationView)findViewById(R.id.img2);
         img3 = (LottieAnimationView)findViewById(R.id.img3);
